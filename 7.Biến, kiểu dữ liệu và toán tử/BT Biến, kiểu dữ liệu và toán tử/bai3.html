@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+    <label for="banKinh">Bán Kính: </label>
+    <input type="number" id="banKinh" placeholder="Nhập bán kính: ">
+
+    <button onclick="tinhDienTich()">Tính Diện tích</button>
+
+    <p id="ketQua"> </p>
+<script>
+    function tinhDienTich() {
+        var banKinh = parseFloat(document.getElementById("banKinh").value)
+
+        if (!isNaN(banKinh) && banKinh > 0) {
+            var dienTich = Math.pow(banKinh, 2) * Math.PI
+
+            document.getElementById("ketQua").innerHTML = "Diện tích hình tròn là: " + dienTich
+        } else {
+            document.getElementById("ketQua").innerHTML = "Bán kính nhập vào không phải là một số."
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+    <label for="banKinh">Bán Kính: </label>
+    <input type="number" id="banKinh" placeholder="Nhập bán kính: ">
+
+    <button onclick="tinhChuVi()">Tính Chu Vi</button>
+
+    <p id="ketQua"> </p>
+<script>
+    function tinhChuVi() {
+        var banKinh = parseFloat(document.getElementById("banKinh").value)
+
+        if (!isNaN(banKinh) && banKinh > 0) {
+            var dienTich = banKinh*2 * Math.PI
+
+            document.getElementById("ketQua").innerHTML = "Chu vi hình tròn là: " + dienTich
+        } else {
+            document.getElementById("ketQua").innerHTML = "Bán kính nhập vào không phải là một số."
+        }
+    }
+</script>
+</body>
+</html>
